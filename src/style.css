@@ -15,6 +15,9 @@
     margin: auto;
     grid-template-rows: 50px 210px 150px 150px;
     grid-template-columns: 10% 20% 60% 10%;
+    grid-template-areas:
+    ". . . ."
+    ". . title-name .";
 }
 
 .header-bar {
@@ -22,6 +25,96 @@
     height: 450px;
 }
 
+.title-name {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 5px ;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-class {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-list {
+    grid-area: title-name;
+}
+
+
 .section {
 
+}
+
+@media (max-width: 768px) {
+    .grid {
+        width: 100%;
+        height: 1800px;
+        margin: auto;
+        grid-template-columns: 5% 30% 60% 5%;
+        grid-template-rows: 20px 210px 210px;
+        grid-template-areas:
+                ". . . ."
+                ". . title-name ."
+                ". . . .";
+    }
+
+    .avatar {
+        justify-self: center;
+    }
+    .hr.border-name {
+
+    }
+
+    .title-list {
+        align-self: center;
+    }
+
+    .title-name {
+        font-size: 35px;
+    }
+
+    .title-class {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 375px) {
+    .avatar {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 10px;
+        justify-self: center;
+    }
+    .header-bar {
+        height: 250px;
+    }
+
+    .grid {
+        width: 100%;
+        height: 1800px;
+        margin: auto;
+        grid-template-columns: 15px 345px 15px;
+        grid-template-rows: 15px 150px 100px;
+        grid-template-areas:
+                ". . ."
+                ". . ."
+                ". title-name .";
+    }
+
+    .title-list {
+        align-self: center;
+    }
+
+    .title-name {
+        font-size: 23px;
+    }
+
+    .title-class {
+        font-size: 20px;
+    }
 }
