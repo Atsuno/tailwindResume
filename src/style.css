@@ -40,9 +40,7 @@ hr.border-name {
     margin: auto;
 }
 
-.item-list {
-    padding-left: 15px;
-}
+
 
 .profile {
     grid-area: profile;
@@ -139,6 +137,11 @@ hr.border-name {
 
     hr.border-name {
         border: none;
+    }
+
+    .item-list {
+        padding-left: 15px;
+        margin-bottom: 15px;
     }
 
     .title-list {
