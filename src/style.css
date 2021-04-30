@@ -40,8 +40,6 @@ hr.border-name {
     margin: auto;
 }
 
-
-
 .profile {
     grid-area: profile;
 }
@@ -73,6 +71,11 @@ hr.border-name {
 
 .side-ber {
     grid-area: side-bar;
+}
+
+.contact-icon {
+    margin-right: 12px;
+    width: 16px;
 }
 
 @media (max-width: 768px) {
