@@ -20,6 +20,11 @@ body {
     grid-column-end: 3;
 }
 
+footer.header-bar {
+    height: 25px;
+    width: 100%;
+}
+
 .grid {
     margin: -450px auto auto auto;
     gap: 15px 0;
@@ -54,16 +59,25 @@ body {
 }
 
 .header-bar {
-    background-color: darkcyan;
+    background: rgb(50,158,122);
+    background: linear-gradient(90deg, rgba(50,158,122,1) 0%,
+    rgba(177,228,202,1) 58%, rgba(149,70,70,1) 100%);
     width: 100%;
     height: 450px;
 }
 
-hr.border-name {
-    border: 2px solid #ecdede;
+.title-list .border-name {
+    border: 2px solid white;
     border-radius: 5px;
     width: 150px;
     margin: auto;
+}
+
+.profile > .border-name {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
+    margin: 20px auto;
 }
 
 .title-list {
@@ -96,8 +110,9 @@ hr.border-name {
 }
 
 .heading {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -110,10 +125,39 @@ hr.border-name {
     justify-self: center;
 }
 
+.side-ber > .border-name {
+    border: 2px solid black;
+    width: 80%;
+    margin: 10px auto;
+}
+
 /*---------Main----------*/
-.profile {
-    text-align: center;
+.profile{
     grid-area: profile;
+}
+
+.profile .item-list {
+    text-align: center;
+}
+
+.profile > h3.heading {
+    margin-bottom: 10px;
+}
+
+h4.heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.profile  p.paragraph {
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.profile p {
+    font-size: 16px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -174,7 +218,7 @@ hr.border-name {
         margin-top: -300px;
         gap: 0;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 15px 150px 150px 150px fit-content(100%) ;
+        grid-template-rows: 15px 150px 150px fit-content(100%) fit-content(100%) ;
         grid-template-areas:
                 ". . ."
                 ". avatar ."
@@ -186,10 +230,8 @@ hr.border-name {
         height: 300px;
     }
 
-    hr.border-name {
-        border: 2px solid #ecdede;
-        border-radius: 5px;
-        width: 100%;
+    .title-list .border-name {
+        width: 50%;
         margin: auto;
     }
     .item-list {
@@ -219,5 +261,12 @@ hr.border-name {
     }
     .profile {
         text-align: left;
+    }
+
+    .profile > .border-name {
+        border: 2px solid  black;
+        border-radius: 5px;
+        margin: 10px 0;
+        width: 100%;
     }
 }
