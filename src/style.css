@@ -1,159 +1,272 @@
-/*----- Common ---------*/
+/*---------common----------*/
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.heading {
-    text-transform: uppercase;
-}
-
-
-/*------Head bar---------*/
-.header-bar {
-    background-color: lightslategray;
-    height: 350px;
-}
-
-.title-bar {
-    margin-top: -200px;
-}
-
-/*
-.container {
-    width: 100%;
-    max-width: 1200px;
-}
-*/
-
-
-
-/*------Title name--------*/
-.avatar {
-    width: 210px;
-    height: 210px;
-    margin-bottom: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 10px 10px 10px 0 black;
-}
-
-.title-name {
-    font-size: 45px;
-    font-weight: 500;
-    margin-bottom: 5px ;
-}
-
-.title-class {
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 5px;
-}
-
-
-/*------Side bar-----------*/
 .contact-icon {
     margin-right: 12px;
     width: 16px;
 }
 
-/*
-.heading-list-contact {
-    grid-area: contact;
+.container {
+    background-image: linear-gradient(to right, rgb(255, 252, 252), rgba(250, 255, 224, 0.7)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    grid-row-start: 2;
+    grid-row-end: span4;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.heading-list-education {
-    grid-area: education;
+footer.header-bar {
+    height: 25px;
+    width: 100%;
 }
 
-.heading-list-expertise {
-    grid-area: expertise;
+.grid {
+    margin: -450px auto auto auto;
+    gap: 15px 0;
+    grid-template-columns: 10% 25% 55% 10%;
+    grid-template-rows: 100px 350px fit-content(100%);
+    grid-template-areas:
+    ". . . ."
+    ". avatar title-name ."
+    ". side-bar profile ."
 }
 
-.heading-list-profile {
-    grid-area: profile;
+.section {
+    width: 100%;
+    max-width: 1200px;
 }
-*/
+
+/*---------Head----------*/
+.avatar {
+    backface-visibility: hidden;
+    border-radius: 50%;
+    justify-self: center;
+    grid-area: avatar;
+    width: 210px;
+    height: 210px;
+    margin-bottom: 40px;
+    object-fit: cover;
+    box-shadow: 10px 10px 10px 0 black;
+}
+
+.col-start-2 {
+    margin: auto;
+}
+
+.header-bar {
+    background: rgb(50,158,122);
+    background: linear-gradient(90deg, rgba(50,158,122,1) 0%,
+    rgba(177,228,202,1) 58%, rgba(149,70,70,1) 100%);
+    width: 100%;
+    height: 450px;
+}
+
+.title-list .border-name {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 150px;
+    margin: auto;
+}
+
+.profile > .border-name {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.title-list {
+    grid-area: title-name;
+    align-self: center;
+}
+
+.title-name {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px ;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-class {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*---------Side Bar----------*/
+.contact ~ div {
+    text-align: center;
+}
+.contact > p {
+    text-align: center;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .item-list {
+    margin-bottom: 25px;
 }
 
-.md\:flex-col {
+.side-ber {
+    grid-area: side-bar;
+    justify-self: center;
+}
+
+.side-ber > .border-name {
+    border: 2px solid black;
+    width: 80%;
+    margin: 10px auto;
+}
+
+/*---------Main----------*/
+.profile{
+    grid-area: profile;
+}
+
+.profile .item-list {
+    text-align: center;
+}
+
+.profile > h3.heading {
+    margin-bottom: 10px;
+}
+
+h4.heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.profile  p.paragraph {
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.profile p {
+    font-size: 16px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    /*----------Head----------*/
-    .title-bar {
-        margin-top: -270px;
-        margin-bottom: 24px;
-    }
-
-    .md\:flex {
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    hr.border-name {
-        border: 2px solid #ecdede;
-        border-radius: 5px;
-        width: 150px;
-        margin: auto;
-    }
-}
-
-@media (max-width: 375px) {
-
-    /*----------Head----------*/
     .header-bar {
-        height: 300px;
+        height: 250px;
     }
 
-    /*----------Title name----------*/
+    .grid {
+        margin-top: -250px;
+        row-gap: 5px;
+        grid-template-columns: 5% 30% 60% 5%;
+        grid-template-rows: 35px 210px fit-content(100%);
+        grid-template-areas:
+                ". . . ."
+                ". avatar title-name ."
+                ". side-bar profile ."
+                ". . . .";
+    }
+
     .avatar {
-        margin: auto;
         width: 150px;
         height: 150px;
         margin-bottom: 10px;
-    }
-    .title-class {
-        margin-bottom: 15px;
+        justify-self: center;
+        align-self: center;
     }
 
-    hr.border-name {
-        border: none;
+    .title-list {
+        align-self: center;
     }
 
     .title-name {
-        font-size: 30px;
-        font-weight: 500;
-        text-align: center;
+        font-size: 35px;
     }
 
     .title-class {
         font-size: 25px;
-        font-weight: 400;
-        text-align: center;
     }
 
+}
 
-    /*-------Side bar--------*/
-    .section {
-       padding-left: 15px;
-        margin-bottom: 15px;
+@media (max-width: 640px) {
+    .avatar {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 10px;
+        justify-self: center;
+    }
+
+    .contact > p {
+        text-align: left;
     }
 
     .container {
-        width: 100%;
+        background: none;
+    }
+    .grid {
+        margin-top: -300px;
+        gap: 0;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 15px 150px 150px fit-content(100%) fit-content(100%) ;
+        grid-template-areas:
+                ". . ."
+                ". avatar ."
+                ". title-name ."
+                ". profile ."
+                ". side-bar .";
+    }
+    .header-bar {
+        height: 300px;
     }
 
+    .title-list .border-name {
+        width: 50%;
+        margin: auto;
+    }
     .item-list {
-        padding-left: 25px;
-        margin-bottom: 20px;
+        padding-left: 15px;
+        margin-bottom: 15px;
     }
 
-    .heading {
-        font-size: 18px;
-        font-weight: 500;
+    .title-list {
+        align-self: center;
+    }
+
+    .title-name {
+        font-size: 23px;
+        margin-bottom: 5px;
+    }
+
+    .title-class {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .side-ber {
+        justify-self: auto;
+    }
+
+    .contact ~ div {
+        text-align: left;
+    }
+    .profile {
+        text-align: left;
+    }
+
+    .profile > .border-name {
+        border: 2px solid  black;
+        border-radius: 5px;
+        margin: 10px 0;
+        width: 100%;
     }
 }
