@@ -110,13 +110,14 @@ footer.header-bar {
 }
 
 .heading {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
 }
 
 .item-list {
+    font-size: 17px;
     margin-bottom: 25px;
 }
 
@@ -129,6 +130,10 @@ footer.header-bar {
     border: 2px solid black;
     width: 80%;
     margin: 10px auto;
+}
+
+.side-ber h3.heading {
+    margin-bottom: 10px;
 }
 
 /*---------Main----------*/
@@ -232,7 +237,7 @@ h4.heading {
 
     .title-list .border-name {
         width: 50%;
-        margin: auto;
+        margin: 10px auto;
     }
     .item-list {
         padding-left: 15px;
@@ -263,10 +268,15 @@ h4.heading {
         text-align: left;
     }
 
+    .side-ber .border-name {
+        margin: 15px 0;
+        width: 100%;
+    }
+
     .profile > .border-name {
         border: 2px solid  black;
         border-radius: 5px;
-        margin: 10px 0;
+        margin: 15px 0;
         width: 100%;
     }
 }
